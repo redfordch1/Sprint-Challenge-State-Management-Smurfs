@@ -4,16 +4,18 @@ import { connect } from 'react-redux';
 
 const Village = (props) => {
 	return (
-		<div>
-			{props.smurfs.map((item) => {
-				return (
-					<div key={item.id}>
-						<p>Name: {`${item.name} Smurf`}</p>
-						<p>Age: {item.age}</p>
-						<p>Height: {item.height}</p>
-					</div>
-				);
-			})}
+		<div className='AllVillage'>
+			<div className='Village__'>
+				{props.smurfs.map((item) => {
+					return (
+						<div className='Smurf_Card' key={item.id}>
+							<p>Name: {`${item.name} Smurf`}</p>
+							<p>Age: {item.age}</p>
+							<p>Height: {item.height}</p>
+						</div>
+					);
+				})}
+			</div>
 		</div>
 	);
 };
